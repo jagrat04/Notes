@@ -1,12 +1,16 @@
-import React from "react";
-import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import initialHome from "./pages/initialHome";
 
 function App() {
   return (
-    <div className="app-container">
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<initialHome/>} />
+        <Route path="/playground" element={<Playground />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
